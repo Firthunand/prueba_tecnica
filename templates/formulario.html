@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Encuesta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Formulario de Encuesta</h1>
+
+        <form method="POST" action="{{ url_for('formulario') }}">
+            <div class="form-group">
+                <label for="pregunta">Pregunta:</label>
+                <input type="text" class="form-control" id="pregunta" name="pregunta" required>
+            </div>
+
+            <!--
+            <div class="form-group">
+                <label for="respuestas_abiertas">Respuestas Abiertas (separadas por líneas):</label>
+                <textarea class="form-control" id="respuestas_abiertas" name="respuestas_abiertas" rows="5" required></textarea>
+            </div>
+            -->
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        {% if respuesta %}
+        <h2>Respuesta:</h2>
+        <div class="container mt-5">
+                
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Resultado</h5>
+                    <p class="card-text">{{ respuesta }}</p>
+                </div>
+            </div>    
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
