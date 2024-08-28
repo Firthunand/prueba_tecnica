@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la Encuesta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Formulario de Encuesta</h1>
+    </div>
+    <div class="container mt-5">
+        <h1 class="mb-4">Resultados</h1>
+
+        <!--
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Satisfacción General (SNG)</h5>
+                <p class="card-text">El SNG de la satisfacción general es: <strong>{{ sng_satisfaccion_general }}</strong></p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Conocimiento de la Empresa</h5>
+                <p class="card-text">Total de personas que conocían la empresa: <strong>{{ conocio_empresa_total }}</strong></p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Recomendación (SNG)</h5>
+                <p class="card-text">El SNG de la recomendación es: <strong>{{ sng_recomendacion }}</strong></p>
+            </div>
+        </div>
+        -->
+        
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Análisis de resultado</h5>
+                <p class="card-text">{{ resultado_sentimiento }}</p>
+            </div>
+            <button><a href="{{ url_for('formulario') }}"">volver</a></button>
+        </div>
+
+        <!--
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Problemas Principales y Conclusión</h5>
+                <p class="card-text">{{ resultado_problemas }}</p>
+            </div>
+        </div>
+        -->
+    
+    </div>
+</body>
+</html>
+
